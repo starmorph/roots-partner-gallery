@@ -2,7 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: [process.env.SUPABASE_HOSTNAME],
+    domains: ['https://starmorph.com'],
   },
   async redirects() {
     return [

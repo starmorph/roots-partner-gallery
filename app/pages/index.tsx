@@ -1,16 +1,26 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import { useState, useEffect } from 'react'
+import styles from '../styles/Home.module.css'
+import supabase from '../utils/supabase'
+import NewTodo from '../components/NewTodo'
 
-const Home: NextPage = () => {
+export default function Home() {
+  const [todos, setTodos] = useState([])
+
+  const fetchTodos = async () => {
+    const { data } = await supabase.from('todos').select('*')
+    setTodos(data)
+  }
+
+  useEffect(() => {
+    fetchTodos()
+  }, [])
+
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <Head>
-        <title>Supabase Partner Gallery Example</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div className={styles.container}>
+      <NewTodo reload={fetchTodos} />
+      {todos.map((todo) => (
+        <p key={todo.id}>{todo.title}</p>
+      ))}
     </div>
   )
 }
-
-export default Home

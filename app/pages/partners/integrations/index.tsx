@@ -36,7 +36,7 @@ interface Props {
 function IntegrationPartnersPage(props: Props) {
   const { partners: initialPartners } = props
   const [partners, setPartners] = useState(initialPartners)
-
+  const [featured, setFeatured] = 
   const allCategories = Array.from(
     new Set(initialPartners.map((p) => p.category))
   )
