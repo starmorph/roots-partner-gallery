@@ -2,7 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['https://starmorph.com'],
+    domains: ['starmorph.com', 'media.discordapp.net'],
   },
   async redirects() {
     return [

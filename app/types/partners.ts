@@ -7,7 +7,7 @@ export interface Partner {
   title: string
   description: string
   logo: string
-  images: string[]
+  images: string[] | null
   overview: string
   website: string
   docs: string
