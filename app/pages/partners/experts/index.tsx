@@ -40,13 +40,13 @@ function ExpertPartnersPage(props: Props) {
   )
 
   const meta_title = 'Find an expert'
-  const meta_description = `Find an expert to help build your next idea.`
+  const meta_description = "Find an expert to help build your next idea."
 
   return (
     <>
       <Head>
         <title>{meta_title} | Supabase Partner Gallery Example</title>
-        <meta name="description" content={meta_description}></meta>
+        <meta name="description" content={meta_description}/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
