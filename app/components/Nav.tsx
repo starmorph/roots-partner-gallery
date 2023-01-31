@@ -8,6 +8,7 @@ const Nav = () => {
   return (
     <nav className="w-full border-b bg-scale-300 p-4">
       <Link href="https://aitools.network">
+        {/* rome-ignore lint/a11y/useValidAnchor: <explanation> */}
         <a className="flex">
           <Image
             src={
